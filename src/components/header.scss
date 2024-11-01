@@ -1,0 +1,16 @@
+.header-nav {
+   height: 70px;
+   width: 100%;
+   background-color: white;
+   position: fixed;
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+   padding-left: 30px;
+   padding-right: 30px;
+
+   img {
+      width: 160px;
+      margin-right: 5px;
+   }
+}

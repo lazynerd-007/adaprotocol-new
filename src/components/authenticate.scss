@@ -1,0 +1,39 @@
+.popup-wallet-initialize{
+    padding: 15px 15px;
+    border: 1px solid rgb(30, 29, 29);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+.popup-wallet-error {
+    padding: 15px 15px;
+    border: 1px solid red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    p {
+        color: red;
+    }
+
+    button {
+    background: #2997d8;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0px 9px;
+
+    }
+}

@@ -1,0 +1,131 @@
+.home-main {
+    height: 100%;
+    max-width: 1064px;
+    margin: 0 auto;
+    padding-top: 100px;
+   
+
+.home-head {
+  text-align: center;
+  padding: 10px;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 500;
+
+    @media (max-width:500px) {
+        font-size: 25px;
+    }
+  }
+
+  h3 {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.35;
+
+    @media (max-width:500px) {
+        font-size: 15px;
+    }
+  }
+}
+
+.img-card-main {
+    text-align: center;
+    padding: 25px;
+
+    img {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.image-grid{
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    @media (max-width:500px) {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+.home-foot {
+    text-align: center;
+    margin: 10px;
+    color: rgb(88, 112, 135);
+    opacity: 0.75;
+    padding-top: 30px;
+
+    h4 {
+        font-weight: 400;
+
+        span {
+            a {
+                color: #f95192;
+    cursor: pointer;
+            }
+        }
+    }
+}
+
+}
+
+footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+
+    div {
+        width: 150px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        .foot-icon {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-right: 10px;
+        }
+    }
+}
+
+.chakra-modal__content-container {
+    align-items:center!important;
+}
+
+
+
+.popup-wallet-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    background: #f2f2f2;
+    border: 1px solid rgba(192, 192, 192, 0.5);
+    border-radius: 5px;
+
+    .wallet-name1 {
+        font-weight: bold;
+    }
+
+    .wallet-name2 {
+        font-size: 13px;
+     margin: 7px 0px;
+        
+    }
+}
