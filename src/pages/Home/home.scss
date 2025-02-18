@@ -372,3 +372,152 @@ footer {
         color: #b8b8b8;
     }
 }
+.market-analysis {
+  margin: 4rem 0;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        color: #08021a;
+        margin-bottom: 1rem;
+      }
+
+      .value {
+        font-size: 1.8rem;
+        color: #8a2be2;
+        margin-bottom: 0.5rem;
+      }
+
+      .trend-up {
+        color: #4caf50;
+      }
+
+      .trend-down {
+        color: #f44336;
+      }
+    }
+  }
+}
+
+.ecosystem-stats {
+  margin: 4rem 0;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        color: #08021a;
+        margin-bottom: 1rem;
+      }
+
+      .count {
+        font-size: 1.8rem;
+        color: #8a2be2;
+        margin-bottom: 0.5rem;
+      }
+
+      .growth {
+        color: #4caf50;
+      }
+    }
+  }
+}
+
+.dev-resources {
+  margin: 4rem 0;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    .resource-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        color: #08021a;
+        margin-bottom: 1rem;
+      }
+
+      .resource-link {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #8a2be2;
+        color: #ffffff;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #9400d3;
+        }
+
+        &.docs { background: #4caf50; }
+        &.code { background: #2196f3; }
+        &.community { background: #ff9800; }
+      }
+    }
+  }
+}
