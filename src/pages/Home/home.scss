@@ -74,7 +74,7 @@ body {
       margin-bottom: 1.5rem;
       letter-spacing: -0.5px;
       line-height: 1.2;
-      background: linear-gradient(135deg, #8a2be2 0%, #4b0082 50%, #9400d3 100%);
+      background: linear-gradient(135deg, #0033AD 0%, #0055FF 50%, #0033AD 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -94,40 +94,129 @@ body {
   }
 }
 
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-  }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  max-width: 1200px;
 
-  .img-card-main {
-    background: rgba(255, 255, 255, 0.05);
+  .service-card {
+    background: #ffffff;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 2rem;
+    text-align: center;
     transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     &:hover {
       transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.1);
     }
 
-    img {
-      width: 80px;
-      height: 80px;
+    .service-icon-wrapper {
+      width: 60px;
+      height: 60px;
+      background: #f5f5f5;
       border-radius: 50%;
-      margin: 0 auto;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+
+      .service-icon {
+        font-size: 1.5rem;
+        color: #0033AD;
+      }
+    }
+
+    h3 {
+      color: #333333;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
     }
 
     p {
-      margin-top: 1rem;
-      text-align: center;
-      color: #6c6b6b;
+      color: #666666;
       font-size: 0.9rem;
+      line-height: 1.5;
     }
   }
+}
 
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+
+  .trending-card {
+    background: linear-gradient(135deg, rgba(45, 42, 61, 0.8) 0%, rgba(45, 42, 61, 0.6) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 12px;
+      padding: 1px;
+      background: linear-gradient(45deg, #8a2be2, #4a90e2);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(138, 43, 226, 0.15);
+
+      &::before {
+        animation: borderGlow 1.5s linear infinite;
+      }
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: #b8b8b8;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+
+      &.change.positive {
+        color: #00ff9d;
+      }
+    }
+  }
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
   .home-foot {
     text-align: center;
     margin-top: 3rem;
@@ -221,6 +310,83 @@ body {
     &:hover {
         cursor: pointer;
     }
+}
+
+.trending-section {
+  margin-top: 3rem;
+
+  h2 {
+    color: #1a1625;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    .trending-card {
+      background: linear-gradient(145deg, #2d2a3d, #1a1625);
+      border-radius: 15px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(138, 43, 226, 0.1);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 15px;
+        padding: 2px;
+        background: linear-gradient(45deg, #8a2be2, #4b0082);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(138, 43, 226, 0.15);
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      h3 {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #b8b8b8;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &.change {
+          color: #00ff9d;
+          font-weight: 600;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
 }
 
 .latest-news {
@@ -393,6 +559,45 @@ footer {
         color: #b8b8b8;
     }
 }
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+
+  .wallet-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: #2d2a3d;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: #8a2be2;
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      object-fit: contain;
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
 .market-analysis {
   margin: 4rem 0;
 
