@@ -40,10 +40,19 @@ body {
   margin: 0 auto;
   padding: 2rem;
 
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
   .home-head {
     text-align: center;
     margin-bottom: 3rem;
     padding: 2rem 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+      padding: 1rem 0;
+    }
 
     h3 {
       color: #08021a;
@@ -51,6 +60,12 @@ body {
       font-weight: 500;
       margin-bottom: 2rem;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+      }
     }
   
     h1 {
@@ -65,12 +80,19 @@ body {
       -webkit-text-fill-color: transparent;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        padding: 0 0.5rem;
+      }
   
       &:hover {
         transform: scale(1.02);
       }
     }
   }
+}
 
   .image-grid {
     display: grid;
@@ -123,7 +145,6 @@ body {
       }
     }
   }
-}
 
 .home-footer-main {
   width: 100%;
