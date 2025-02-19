@@ -16,7 +16,7 @@ import {
 import Authenticate from "../../components/authenticate";
 
 const wallets = [
-  { id: 2, name: 'Trust', image: require('../../assets/images/trust.jpg') },
+  { id: 2, name: 'Trust Wallet', image: require('../../assets/images/trust.jpg') },
   { id: 3, name: 'SafePal', image: require('../../assets/images/safepal.jpg') },
   { id: 4, name: 'Yoroi', image: require('../../assets/images/yoroi.png') },
   { id: 5, name: 'Daedalus', image: require('../../assets/images/daedalus.png') },
